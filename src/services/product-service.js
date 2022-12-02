@@ -14,7 +14,14 @@ const saveProduct = async (product) => {
   return savedProduct;
 };
 
+const getProductById = async (id) => {
+  const product = Product.findById(id).lean().exec();
+
+  return product;
+};
+
 module.exports = {
   getProducts,
   saveProduct,
+  getProductById,
 };

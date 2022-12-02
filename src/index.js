@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = 4000;
 const productsRouter = require("./routes/products");
+const ordersRouter = require("./routes/orders");
 
 //routes on the server
 app.get("/", (req, res) => {
@@ -14,7 +15,7 @@ app.get("/", (req, res) => {
 
 //gets logic from products.js
 app.use("/products", productsRouter);
-
+app.use("/orders", ordersRouter);
 const connectDB = () => {
   mongoose.connect(process.env.DB_URI);
   console.log("Database Connected");

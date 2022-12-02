@@ -9,7 +9,7 @@ const productsRouter = require("./routes/products");
 
 //routes on the server
 app.get("/", (req, res) => {
-  res.json({ message: "Hello World!" });
+  res.json({ message: "Hello Worlds!" });
 });
 
 //gets logic from products.js

@@ -13,6 +13,7 @@ const saveProduct = async (req, res) => {
   const product = req.body;
   const savedProduct = await ProductService.saveProduct(product);
   res.status(201).json();
+  return savedProduct;
 };
 
 //export object with all functions
